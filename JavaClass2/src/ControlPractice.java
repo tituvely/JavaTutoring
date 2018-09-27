@@ -31,7 +31,7 @@ public class ControlPractice {
 //        /* 삼항연산자 */
 //        //조건식 ? 피연산자1 : 피연산자2
 //        int c1 = (5>4) ? 50 : 40;
-//        //조건식이 true이므로 b1은 50이 된다.
+//        //조건식이 true이므로 c1은 50이 된다.
 //
 //        int c2 = 0;
 //        if(5 > 4){
@@ -50,6 +50,7 @@ public class ControlPractice {
 ////                break;
 ////            default;
 ////        }
+
 //        int value = 1;
 //
 //        switch(value){
@@ -65,6 +66,8 @@ public class ControlPractice {
 //            default :
 //                System.out.println("그 외의 숫자");
 //        }
+
+
 //
 //        String str = "A";
 //
