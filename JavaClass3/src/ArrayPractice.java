@@ -1,8 +1,8 @@
 public class ArrayPractice {
     public static void main(String[] args) {
         /* 배열 Array */
-//        배열은 같은 데이터 타입을 가진 연속된 메모리 공간으로 이루어진 자료구조이다.
-//        같은 데이터 타입을 가진 여러개의 변수가 필요할 때 사용한다.
+//       배열은 같은 데이터 타입을 가진 연속된 메모리 공간으로 이루어진 자료구조이다.
+//       같은 데이터 타입을 가진 여러개의 변수가 필요할 때 사용한다.
 
         int i;
         int[] array1 = new int[4];
@@ -14,6 +14,7 @@ public class ArrayPractice {
         array1[3] = 4;
         //자바에서 배열의 인덱스는 0번 부터 사용한다. 4개짜리 배열은 0부터 3까지의 인덱스를 가지게 된다.
         //배열인덱스 0번부터 3번까지 차례로 1,2,3,4 값을 저장한다.
+        System.out.println(array1[1]);
 
         int value = array1[2];
         //array1 이 참조하는 배열의 2번 인덱스에 해당하는 값 3을 꺼내서 int형 변수 value에 담는다.
@@ -24,13 +25,14 @@ public class ArrayPractice {
         int[] array2 = new int[]{1,2,3,4,5};
         //int 값을 5개저장 할 수 있는 배열이며, 해당 배열에는 1,2,3,4,5가 순서대로 저장되게 된다.
         //선언과 동시에 초기화
-
+        System.out.println(array2[0]); //1
 
 
         /* for 반복문을 이용해서 배열 사용하기 */
         int[] iarray = new int[100];
         iarray[0] = 1;
         iarray[1] = 2;
+
 
         System.out.println(iarray.length);
         //배열을 참조하는 레퍼런스 변수.length 하면 해당 배열의 길이를 리턴한다.
@@ -43,11 +45,15 @@ public class ArrayPractice {
             //배열의 인덱스는 0부터인데 넣고 싶은 값은 1부터 사용해야하므로, 인덱스에 1을 더해준 값을 넣어준다.
         }
 
+        for(i = 0; i < iarray.length; i++){
+            System.out.println(iarray[i]);
+        }
+
         //배열에 저장된 값을 모두 더해주기
         int sum = 0;
         //값을 누적하기위한 변수는 반복문 밖에서 선언한다.
 
-        for(i = 0; i< iarray.length; i++){
+        for(i = 0; i < iarray.length; i++){
             // 배열의 크기만큼 반복한다.
 
             sum = sum + iarray[i];
@@ -57,6 +63,14 @@ public class ArrayPractice {
         System.out.println(sum);
         //배열에 들어있는 모든 값 누적한 변수를 출력한다.
 
+        //배열에 저장된 값을 모두 곱해주기
+        int mul = 1;
+
+        for(i = 0  ; i < 10 ; i++){
+            mul = mul * iarray[i];
+        }
+
+        System.out.println(mul);
 
         /* 2차원 배열 */
         int[][] array4 = new int[3][4];
@@ -78,13 +92,24 @@ public class ArrayPractice {
         int[][] array6 = {{1}, {2,3}, {4,5,6}};
         //위와 같이 선언할 경우 array6[0][0] 는 1이다. array6[1][0]은 2이다.
         //선언과 동시에 초기화
+        System.out.println(array6[2][0]); //4
 
 
         /* for each 문 */
         int[] iarr = {10,20,30,40,50};
 
-        for(int value:iarr){
-            System.out.println(value);
+        for(i = 0; i < iarr.length; i++){
+            System.out.println(iarr[i]);
+        }
+
+        for(int a :iarr){
+            System.out.println(a);
+        }
+
+        double[] doublearray = {0, -32, 9.3, 3.14};
+
+        for(double d: doublearray){
+            System.out.println(d);
         }
 
     }
